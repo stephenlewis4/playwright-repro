@@ -1,0 +1,19 @@
+{
+  "name": "bun-playwright-launch-timeout-repro",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "install:browsers": "node ./node_modules/playwright/cli.js install chromium",
+    "probe:node": "node ./scripts/launch.mjs",
+    "probe:bun": "bun ./scripts/launch.mjs",
+    "test:list:node": "node ./node_modules/playwright/cli.js test --list",
+    "test:list:bun": "bun ./node_modules/playwright/cli.js test --list",
+    "test:node": "node ./node_modules/playwright/cli.js test",
+    "test:bun": "bun ./node_modules/playwright/cli.js test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.60.0",
+    "playwright": "1.60.0"
+  }
+}
